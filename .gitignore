@@ -1,1 +1,61 @@
-.vs/
+# VS User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build folders
+bin/
+obj/
+.vs/  
+
+# Visual Studio cache & logs
+*.log
+*.tmp
+*.tmp_proj
+*.tlog
+*.svclog
+*.pdb
+*.ipdb
+*.sbr
+
+# Test & Coverage results
+TestResult.xml
+*.coverage
+*.coveragexml
+*.nunit.xml
+*.VisualState.xml
+*.trx
+coverage*.json
+coverage*.xml
+coverage*.info
+
+# Others
+*.dbmdl
+*.jfm
+*.pfx
+*.publishsettings
+*.vscode/
+node_modules/
+packages/
+*.nupkg
+*.snupkg
+*.bak
+*.old
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+*.dll
+*.exe
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# Local History
+.localhistory/
+.history/
+.vshistory/
