@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using ExpenseTracker.Models;
 using ExpenseTracker.Services;
+using System;
 
 namespace ExpenseTracker.Tests
 {
@@ -18,7 +19,7 @@ namespace ExpenseTracker.Tests
         public void AddExpense_ShouldIncreaseCount()
         {
             _service.AddExpense(new Expense(DateTime.Now, "Food", 10, "Lunch"));
-            Assert.AreEqual(1, _service.GetAllExpenses().Count);
+            Assert.That(_service.GetAllExpenses().Count, Is.EqualTo(1));
         }
 
         [Test]
@@ -26,8 +27,7 @@ namespace ExpenseTracker.Tests
         {
             _service.AddExpense(new Expense(DateTime.Now, "Transport", 5, "Bus"));
             _service.AddExpense(new Expense(DateTime.Now, "Transport", 15, "Taxi"));
-
-            Assert.AreEqual(20, _service.GetTotalByCategory("Transport"));
+            Assert.That(_service.GetTotalByCategory("Transport"), Is.EqualTo(20));
         }
 
         [Test]
@@ -35,8 +35,7 @@ namespace ExpenseTracker.Tests
         {
             _service.AddExpense(new Expense(DateTime.Now, "Food", 12, "Pizza"));
             _service.AddExpense(new Expense(DateTime.Now, "Books", 8, "Textbook"));
-
-            Assert.AreEqual(20, _service.GetTotal());
+            Assert.That(_service.GetTotal(), Is.EqualTo(20));
         }
     }
 }

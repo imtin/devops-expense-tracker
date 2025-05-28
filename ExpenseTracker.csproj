@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <!-- Force exclusion of any files from test folder -->
+    <None Remove="ExpenseTracker.Tests\**" />
+    <Compile Remove="ExpenseTracker.Tests\**" />
+  </ItemGroup>
+
 </Project>
